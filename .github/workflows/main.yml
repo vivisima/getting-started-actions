@@ -41,7 +41,7 @@ jobs:
           echo Is git installed?
           git --version
           echo What about build tools?
-          mvn --vesrion
+          mvn --version
           gradle --version
           ant -version
           
