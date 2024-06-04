@@ -32,16 +32,24 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo What is in this directory
+          echo 1. What is in this directory
           ls -a
           echo
-          echo Is Java installed?
+          echo 2. Is Java installed?
           java -version
           echo
-          echo Is git installed?
+          echo 3. Is git installed?
           git --version
-          echo What about build tools?
+          echo 4. What about build tools?
           mvn --version
           gradle --version
           ant -version
+          echo 5. What is the workspace location?
+          echo $RUNNER_WORKSPACE
+          echo 6. Who is running this script?
+          whoami
+          echo 7. How is the disk laid out?
+          df
+          echo 8. What environment variables are available?
+          env
           
