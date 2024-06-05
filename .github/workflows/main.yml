@@ -27,29 +27,12 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: sh ./github-actions-script.sh
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo 1. What is in this directory
+          echo Nothing to see in the multi-line script
+          echo Here is is what is in the folder
           ls -a
-          echo
-          echo 2. Is Java installed?
-          java -version
-          echo
-          echo 3. Is git installed?
-          git --version
-          echo 4. What about build tools?
-          mvn --version
-          gradle --version
-          ant -version
-          echo 5. What is the workspace location?
-          echo $RUNNER_WORKSPACE
-          echo 6. Who is running this script?
-          whoami
-          echo 7. How is the disk laid out?
-          df
-          echo 8. What environment variables are available?
-          env
           
